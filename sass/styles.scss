@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Tajawal:wght@500&display=swap');
+
+//https://coolors.co/14213d-fca311-e5e5e5-000000
+$color1: #14213D;
+$color2: #FCA311;
+$color3: #E5E5E5;
+$color4: #000000;
+
+html {
+    body {
+        min-width: 300px;
+        max-width: 1400px;
+        margin: 0 auto;
+        font-family: 'Tajawal', sans-serif;
+        background: $color3;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Fira Sans Condensed', sans-serif;
+        }
+    }
+}
+
+header {
+    background: $color1;
+    color: $color3;
+    padding: 5px 10%;
+    transition: 0.3s all;
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(max-width: 700px) {
+        padding: 5px 3%;
+    }
+
+    h1 {
+        width: 100%;
+        font-size: 50px;
+
+        @media(max-width: 700px) {
+            font-size: 40px;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 30px;
+        }
+
+        a {
+            color: white;
+            transition: 0.3s;
+
+            &:hover {
+                color: $color2;
+            }
+        }
+    }
+}
+
+main {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(../img/banner.jpg);
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+    .notes-ctnr {
+        width: 100%;
+        p {
+            line-height: 1.5em;
+            font-size: 18px;
+            a {
+                color: $color1;
+                text-decoration: none;
+                font-weight: bold;
+                transition: 0.5s;
+                &:hover {
+                    color: #FCA311;
+                }
+            }
+        }
+        .code-example {
+            display: block;
+            margin: 15px auto;
+            width: 75%;
+            max-width: 674px;
+            pointer-events: none;
+            border-radius: 10px;
+            border: 3px solid $color1;
+        }
+    }
+
+    .content-table {
+        width: 50%;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+        h2 {
+            font-size: 40px;
+        }
+    }
+
+    ol {
+        padding-left: 35px;
+        font-size: 30px;
+
+        li {
+            padding: 10px 0px;
+
+            a {
+                text-decoration: none;
+                color: $color1;
+                transition: 0.3s;
+
+                &:hover {
+                    background: $color2;
+                    color: black;
+
+                }
+            }
+        }
+    }
+}
+
+.img-ctnr {
+    width: 50%;
+
+    @media (max-width: 900px) {
+        width: 70%;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
+}
+
+footer {
+    padding: 30px 10%;
+    text-align: center;
+    background: $color2;
+    color: $color1;
+    font-size: 18px;
+}
