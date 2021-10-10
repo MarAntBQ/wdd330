@@ -79,7 +79,7 @@ main .notes-ctnr {
   width: 100%;
 }
 main .notes-ctnr p {
-  line-height: 1.5em;
+  line-height: 1.7em;
   font-size: 18px;
 }
 main .notes-ctnr p a {
@@ -104,6 +104,30 @@ main .notes-ctnr ul li {
   font-size: 18px;
   padding-left: 25px;
   line-height: 1.5em;
+}
+main .notes-ctnr .code-ctnr {
+  background: #1f1e1e;
+  border-radius: 7px;
+  color: #f3bd66;
+  margin: 15px 0px;
+  padding: 10px;
+  font-size: 18px;
+}
+main .notes-ctnr .code-ctnr code {
+  width: 100%;
+  line-height: 2em;
+}
+main .notes-ctnr .code-ctnr code strong {
+  color: #a4f3b1;
+}
+main .notes-ctnr .code-ctnr code .attrib1 {
+  color: #f1f366;
+}
+main .notes-ctnr .code-ctnr code .attrib2 {
+  color: #e8aef3;
+}
+main .notes-ctnr .code-ctnr code .attrib3 {
+  color: white;
 }
 main .content-table {
   width: 50%;

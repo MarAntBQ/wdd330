@@ -88,7 +88,7 @@ main {
     .notes-ctnr {
         width: 100%;
         p {
-            line-height: 1.5em;
+            line-height: 1.7em;
             font-size: 18px;
             a {
                 color: $color1;
@@ -114,6 +114,30 @@ main {
                 font-size: 18px;
                 padding-left: 25px;
                 line-height: 1.5em;
+            }
+        }
+        .code-ctnr {
+            background: rgb(31, 30, 30);
+            border-radius: 7px;
+            color: #f3bd66;
+            margin: 15px 0px;
+            padding: 10px;
+            font-size: 18px;
+            code {
+                width: 100%;
+                line-height: 2em;
+                strong {
+                    color: #a4f3b1;
+                }
+                .attrib1 {
+                    color: #f1f366;
+                }
+                .attrib2 {
+                    color: #e8aef3;
+                }
+                .attrib3 {
+                    color: white;
+                }
             }
         }
     }

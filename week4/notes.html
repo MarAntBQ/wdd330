@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marco Antonio Bustillos Quiroz - WDD330 | Week 4 | Notes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <!-- SEO Codes -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Marco Antonio Bustillos Quiroz">
+    <meta name="copyright" content="© 2021 Marco Antonio Bustillos Quiroz - All Rights Reserved">
+    <!-- <script src="js/main.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <h1><a href="./"><i class="fas fa-arrow-alt-circle-left"></i></a> Week 04 | Notes</h1>
+    </header>
+    <main>
+        <div class="notes-ctnr">
+            <h1>Forms, OOP &amp; Modular <i class="fab fa-js-square"></i></h1>
+            <br>
+            <hr>
+            <br>
+            <h2>Forms:</h2>
+            <br>
+            <p>This is a new Week, I’m really excited to learn more about JavaScript, so we begin by learning about
+                Forms.</p>
+            <p>It’s really important to know that a form has form controls: input, select menus and buttons, etc. The
+                purpose it’s to gather information and after send it to another place in order to interact with this
+                information in the backend side.</p>
+            <p><strong>Now let’s talk about the form objects that have properties and methods:</strong></p>
+            <p>The most important method is the submit() method by: a button or input element but it needs to have a
+                submit attribute, example:</p>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="oNeNwwg"
+                data-user="marcoantoniomgda"
+                style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/marcoantoniomgda/pen/oNeNwwg">
+                        Week04-E1</a> by MarcoAntonioMGDA (<a
+                        href="https://codepen.io/marcoantoniomgda">@marcoantoniomgda</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <br>
+            <p><strong>Reset()</strong> will reset all the form controls back to the initial state. “We need to have
+                precaution with this kind of buttons”</p>
+            <p>We can use events for example focus, for me it’s better to display through CSS “when we want to say the
+                user where he/she is working,” also there are the change and blur events.</p>
+            <p>It’s really cool to see a different way to use a function when a form it’s submitted, with this example
+            </p>
+            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="bGrGRRo"
+                data-user="marcoantoniomgda"
+                style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/marcoantoniomgda/pen/bGrGRRo">
+                        Week04-E2</a> by MarcoAntonioMGDA (<a
+                        href="https://codepen.io/marcoantoniomgda">@marcoantoniomgda</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <br>
+            <p>For me it’s better to use a placeholder rather than using a label, in a modern UI/UX it’s powerful.</p>
+            <p>We have in form controls: inputs “different”, select, textarea, and button.</p>
+            <p>We can go deeper through working with the forms by pushing all the data to a JSON with JSON.stringify()
+                but this happens through the creation of an object.</p>
+            <p>Talking about input we have:</p>
+            <p>Text “default”, password “secret information, but the user can’t see on screen”, checkbox “in this case
+                all the elements have the same name property, so it’ll create an array of those elements”, Radio button
+                “only one option”, file “the user attaches files”, we have others number, tel, color, etc.</p>
+            <p>I like the select drop-down list it’s because has a common use with the radio button, but the user can
+                see one at time, and he needs to open the list.</p>
+            <p>The text areas are useful when the user needs to upload long pieces of text over multiple lines.</p>
+            <p>Buttons are commonly used to submit a form, but we covered about the reset before.</p>
+            <p>Form validation is really important if we’re handling data, it’s required that everything is going in the
+                way we wanted, in order to avoid back-end problems, so it can be performed by the client side by using
+                JavaScript or the default validations for the browser, but there’re extensions or the user can change
+                the code, so it’s really important to validate data by the server side.</p>
+            <p>Also, we can use in time validations in order to avoid the user to submit the form and repeat the
+                process, it’s really useful, so the user can know if he or she is doing great, also through that option we can enable and disable to button.</p>
+            <br>
+            <h2>Object-oriented programming (OOP):</h2>
+            <br>
+            <p>We learned about objects before so it’s this style that involves them with their properties and methods, it’s used to model representations of objects in the real world.</p>
+            <p>We have 3 concepts:</p>
+            <p><strong>Encapsulation:</strong> Keep all the programming logic inside an object and making methods available to implement the functionality.</p>
+            <p><strong>Polymorphism:</strong> Various objects can share the same method, but they can override shared methods with a different implementation.</p>
+            <p><strong>Inheritance:</strong> Take an object that exists and inherit all its properties and methods, also we can improve on its functionality by adding new properties and methods.</p>
+            <p><strong>Classes:</strong> To define a blueprint for an object with the properties and methods.</p>
+            <p>Constructor functions are the way that we model the object where we create the properties, and give the functions that it can perform.</p>
+            <p>We can use Object, Array and Function to create objects, arrays and functions.</p>
+            <p>With ES6 we have a new class declaration syntax “it makes sense,” and it’s more understandable than constructer function syntax, in my case I think that it’s easier to read.</p>
+            <p>Static methods are called directly by the class rather than by instances of the class.</p>
+            <p>Prototypal inheritance model means that every class has a different prototype property that is shared by every instance of the class.</p>
+            <p>Prototype property of the class are useful if we don’t have access to the class declaration, but we want to add properties and methods.</p>
+            <p>If we want to know the prototypes, we can use the constructor function’s prototype property or Object.getPrototypeof() method “it’s required to send the object as parameter”.</p>
+            <p>It’s really cool to know about the Prototype Is Live in case the “ninja turtles” in case that a new property of method is added so its class will inherit the new properties and methods automatically.</p>
+            <p>Methods are like functions that an object can perform so we have public and private ones. It’s really important that we can understand the differences and give access through public to what’s required for.</p>
+            <p>The constructors for objects are important: “When an object calls a method, the JavaScript engine will check to see if the object has that method. If it doesn’t, it will check if the object’s prototype has the method. If not, it will check whether the prototype’s prototype has it”</p>
+            <p>If properties are not enumerable, they won’t show up when a for-in loop is used to loop through an object’s properties and methods.</p>
+            <p>A class can inherit from another class using the extends keyword in a class declaration, it’s really curious because I used something like that with PHP in SQL DB connection, so I extended the connections in my models, so the purpose was to access all the properties of my connection.</p>
+            <p> We can override a method with Polymorphism. For example, a new way to present a string, etc. Monkey-Patching is adding more methods to the prototype of JavaScript’s built-in objects — such as Number, String, and Array — to add more functionality.</p>
+            <p>A property descriptor is where the Property Attributes and Descriptors are stored. The get() and set() methods can be used to control how a property is set using assignment and the value that is returned when a property is queried.</p>
+            <p>We can use the create method in order to create a new object “exact copy of the object that is provided as an argument.” Creating objects from objects will create a prototype chain.</p>
+            <p>Mixins: A way of adding properties and methods of some objects to another object without using inheritance. One use for the mixin() function is to add a large number of properties to an object all at once, for example it’s like creating an entire array:</p>
+            <br>
+            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="eYEYReb" data-user="marcoantoniomgda" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/marcoantoniomgda/pen/eYEYReb">
+                Week04-E3</a> by MarcoAntonioMGDA (<a href="https://codepen.io/marcoantoniomgda">@marcoantoniomgda</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <br>
+            <p>The mixin() function lets us encapsulate properties and methods in an object.</p>
+            <p>Factory Functions: can be used to return an object and we can mix with other methods for example copy() and mixin().</p>
+            <p>If a method returns this, its methods can be chained together to form a sequence of method calls that are called one after the other.</p>
+            <p>A common solution is to set the variable that to equal this before the nested function, and refer to that in the nested function instead of this.</p>
+            <p>The “Gorilla Banana” problem occurs when you need a method from an object, so you inherit from that object. it’s recommended to make classes “skinny” don’t have too many properties and methods.</p>
+            <br>
+            <h2>Modular JavaScript:</h2>
+            <br>
+              <p>It’s a good practice to separate our JS code in different files, but gather them by same or similar functions in order to have a good control, and project growing.</p>
+              <p>The coupling of code refers to how dependent certain elements or modules of code are on each other.</p>
+              <p>Node.js had already implemented modules before they were introduced in ES6, and used a slightly different notation called Common JS modules.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Questions:</h2>
+            <br>
+            <ul>
+                <li> Why are we using preventDefault() and should I write code in that function, or it’s system default “integrated”?</li>
+                <li>Could be in a future a new way to get data rather than using <strong>forms</strong></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2021 Marco Antonio Bustillos - All Rights Reserved</p>
+    </footer>
+</body>
