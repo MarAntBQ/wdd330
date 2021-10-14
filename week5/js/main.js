@@ -1,25 +1,8 @@
 function showWeeklyList() {
     const links = [{
-        label: "Week 1",
-        url: "week1/"
-    },
-    {
-        label: "Week 2",
-        url: "week2/"
-    },
-    {
-        label: "Week 3",
-        url: "week3/"
-    },
-    {
-        label: "Week 4",
-        url: "week4/"
-    },
-    {
-        label: "Week 5",
-        url: "week5/"
-    }
-];
+        label: "Notes",
+        url: "notes.html"
+    }];
     var listDisplayer = document.getElementById("weekly_list");
     listDisplayer.innerHTML = null;
     var numberOfLinks = links.length;
