@@ -1,0 +1,150 @@
+@import url("marbust-framework.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$color1: #210203;
+$color2: #C17767;
+$color3: #D3B99F;
+$color4: #6D98BA;
+$color5: #9AADBF;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Libre+Baskerville&display=swap');
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: $color5;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+}
+
+header {
+    height: 70px;
+    max-height: 70px;
+    min-height: 70px;
+    align-items: center;
+    display: flex;
+    padding: 0px 10px;
+    background: $color1;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 300px;
+    position: fixed;
+    top: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    nav {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 20px;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .return-menu-btn {
+            padding: 10px;
+            transition: 0.3s;
+            &:hover {
+                background: $color2;
+                color: white;
+            }
+        }
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            list-style: none;
+            li {
+                a {
+                    font-size: 25px;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $color3;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/banner.jpg);
+    padding: 30px 10%;
+    @media (max-width: 700px) {
+        padding: 30px 3%;
+    }
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .tasks {
+        background: rgba(255, 255, 255, 0.041);
+        padding: 10px;
+        h1 {
+            margin-top: 10px;
+            background: $color3;
+            border-radius: 3px;
+        }
+        ul {
+            margin-top: 15px;
+            list-style: none;
+            li {
+                display: flex;
+                align-items: center;
+                margin: 5px 0px;
+                transition: 0.3s;
+                &:nth-of-type(even) {
+                    background: white;
+                }
+                &:nth-of-type(odd) {
+                    background: rgb(226, 226, 226);
+                }
+                &:hover {
+                    background: rgb(187, 187, 187);
+                }
+                
+                span {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 18px;
+                    padding: 0px 5px;
+                    font-weight: bold;
+                }
+                .delete-task-btn, .done-btn {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: $color1;
+                    //border: 1px solid rgba(0, 0, 0, 0.226);
+                    cursor: pointer;
+                    transition: 0.3s;
+                    color: white;
+                    &:hover {
+                        background: $color4;
+                    }
+                }
+            }
+        }
+    }
+
+    .controls {
+        background: rgba(255, 255, 255, 0.041);
+        padding: 10px;
+        h1 {
+            margin-top: 10px;
+            background: $color3;
+            border-radius: 3px;
+        }
+    }
+}

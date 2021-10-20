@@ -1,0 +1,141 @@
+@import url("marbust-framework.css");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Libre+Baskerville&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background: #9AADBF;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+header {
+  height: 70px;
+  max-height: 70px;
+  min-height: 70px;
+  align-items: center;
+  display: flex;
+  padding: 0px 10px;
+  background: #210203;
+  width: 100%;
+  max-width: 1400px;
+  min-width: 300px;
+  position: fixed;
+  top: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+header nav .return-menu-btn {
+  padding: 10px;
+  transition: 0.3s;
+}
+header nav .return-menu-btn:hover {
+  background: #C17767;
+  color: white;
+}
+header nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  list-style: none;
+}
+header nav ul li a {
+  font-size: 25px;
+  transition: 0.3s;
+}
+header nav ul li a:hover {
+  color: #D3B99F;
+}
+
+main {
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/banner.jpg);
+  padding: 30px 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  main {
+    padding: 30px 3%;
+  }
+}
+main .tasks {
+  background: rgba(255, 255, 255, 0.041);
+  padding: 10px;
+}
+main .tasks h1 {
+  margin-top: 10px;
+  background: #D3B99F;
+  border-radius: 3px;
+}
+main .tasks ul {
+  margin-top: 15px;
+  list-style: none;
+}
+main .tasks ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0px;
+  transition: 0.3s;
+}
+main .tasks ul li:nth-of-type(even) {
+  background: white;
+}
+main .tasks ul li:nth-of-type(odd) {
+  background: #e2e2e2;
+}
+main .tasks ul li:hover {
+  background: #bbbbbb;
+}
+main .tasks ul li span {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 0px 5px;
+  font-weight: bold;
+}
+main .tasks ul li .delete-task-btn, main .tasks ul li .done-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #210203;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+main .tasks ul li .delete-task-btn:hover, main .tasks ul li .done-btn:hover {
+  background: #6D98BA;
+}
+main .controls {
+  background: rgba(255, 255, 255, 0.041);
+  padding: 10px;
+}
+main .controls h1 {
+  margin-top: 10px;
+  background: #D3B99F;
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=styles.css.map */
