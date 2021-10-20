@@ -136,6 +136,8 @@ main {
                 border: 1px solid $color3;
             }
 
+
+
             li {
                 display: flex;
                 align-items: center;
@@ -161,12 +163,6 @@ main {
                     padding: 0px 5px;
                     font-weight: bold;
                     transition: 0.3s;
-                }
-
-                .done {
-                    text-decoration: line-through;
-                    text-decoration-color: $color1;
-                    text-decoration-thickness: 3px;
                 }
 
                 .delete-task-btn,
@@ -204,6 +200,14 @@ main {
                             opacity: 0.5;
                         }
                     }
+                }
+            }
+
+            .done {
+                span {
+                    text-decoration: line-through;
+                    text-decoration-color: $color1;
+                    text-decoration-thickness: 3px;
                 }
             }
         }

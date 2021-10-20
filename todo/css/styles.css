@@ -135,11 +135,6 @@ main .tasks ul li span {
   font-weight: bold;
   transition: 0.3s;
 }
-main .tasks ul li .done {
-  text-decoration: line-through;
-  text-decoration-color: #210203;
-  text-decoration-thickness: 3px;
-}
 main .tasks ul li .delete-task-btn,
 main .tasks ul li .done-btn {
   width: 50px;
@@ -166,6 +161,11 @@ main .tasks ul li .delete-task-btn {
 }
 main .tasks ul li .delete-task-btn:hover ~ span {
   opacity: 0.5;
+}
+main .tasks ul .done span {
+  text-decoration: line-through;
+  text-decoration-color: #210203;
+  text-decoration-thickness: 3px;
 }
 main .tasks .tasks-options {
   color: black;
