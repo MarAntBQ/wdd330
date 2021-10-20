@@ -10,7 +10,12 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   background: #9AADBF;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -114,7 +119,11 @@ main .tasks ul li span {
   padding: 0px 5px;
   font-weight: bold;
 }
-main .tasks ul li .delete-task-btn, main .tasks ul li .done-btn {
+main .tasks ul li .done {
+  text-decoration: line-through;
+}
+main .tasks ul li .delete-task-btn,
+main .tasks ul li .done-btn {
   width: 50px;
   height: 50px;
   display: flex;
@@ -125,8 +134,12 @@ main .tasks ul li .delete-task-btn, main .tasks ul li .done-btn {
   transition: 0.3s;
   color: white;
 }
-main .tasks ul li .delete-task-btn:hover, main .tasks ul li .done-btn:hover {
+main .tasks ul li .delete-task-btn:hover,
+main .tasks ul li .done-btn:hover {
   background: #6D98BA;
+}
+main .tasks ul li .done-btn:hover ~ span {
+  text-decoration: line-through;
 }
 main .controls {
   background: rgba(255, 255, 255, 0.041);
