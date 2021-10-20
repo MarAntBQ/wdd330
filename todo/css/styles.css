@@ -99,6 +99,18 @@ main .tasks ul {
   list-style: none;
   max-height: 65vh;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #210203 #D3B99F;
+}
+main .tasks ul::-webkit-scrollbar {
+  width: 8px;
+}
+main .tasks ul::-webkit-scrollbar-track {
+  background: #D3B99F;
+}
+main .tasks ul::-webkit-scrollbar-thumb {
+  background-color: #6D98BA;
+  border: 1px solid #D3B99F;
 }
 main .tasks ul li {
   display: flex;
