@@ -116,13 +116,15 @@ main {
         ul {
             margin-top: 15px;
             list-style: none;
+            //margin-bottom: 30px;
+            max-height: 65vh;
+            overflow-y: auto;
 
             li {
                 display: flex;
                 align-items: center;
                 margin: 5px 0px;
                 transition: 0.3s;
-
                 &:nth-of-type(even) {
                     background: white;
                 }
@@ -141,10 +143,13 @@ main {
                     font-size: 18px;
                     padding: 0px 5px;
                     font-weight: bold;
+                    transition: 0.3s;
                 }
 
                 .done {
                     text-decoration: line-through;
+                    text-decoration-color: $color1;
+                    text-decoration-thickness: 3px;
                 }
 
                 .delete-task-btn,
@@ -168,6 +173,8 @@ main {
                     &:hover {
                         ~span {
                             text-decoration: line-through;
+                            text-decoration-color: $color1;
+                    text-decoration-thickness: 3px;
                         }
                     }
                 }
@@ -179,6 +186,44 @@ main {
                             opacity: 0.5;
                         }
                     }
+                }
+            }
+        }
+        .tasks-options {
+            color: black;
+            background: white;
+            padding: 15px 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .counter {
+                min-width: 100px;
+                text-align: center;
+            }
+            .progress {
+                //width: 100%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                //justify-content: space-around;
+                p {
+                    margin: 5px;
+                    text-align: center;
+                    padding: 10px;
+                    border: 2px solid white;
+                    transition: 0.3s;
+                    @media (max-width: 450px) {
+                        width: 100%;
+                    }
+                    &:hover {
+                        border: 2px solid $color1;
+                        cursor: pointer;
+                    }
+                }
+                .selected {
+                    border: 2px solid $color1;
                 }
             }
         }

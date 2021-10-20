@@ -97,6 +97,8 @@ main .tasks h1 {
 main .tasks ul {
   margin-top: 15px;
   list-style: none;
+  max-height: 65vh;
+  overflow-y: auto;
 }
 main .tasks ul li {
   display: flex;
@@ -119,9 +121,12 @@ main .tasks ul li span {
   font-size: 18px;
   padding: 0px 5px;
   font-weight: bold;
+  transition: 0.3s;
 }
 main .tasks ul li .done {
   text-decoration: line-through;
+  text-decoration-color: #210203;
+  text-decoration-thickness: 3px;
 }
 main .tasks ul li .delete-task-btn,
 main .tasks ul li .done-btn {
@@ -141,12 +146,52 @@ main .tasks ul li .done-btn:hover {
 }
 main .tasks ul li .done-btn:hover ~ span {
   text-decoration: line-through;
+  text-decoration-color: #210203;
+  text-decoration-thickness: 3px;
 }
 main .tasks ul li .delete-task-btn {
   order: 1;
 }
 main .tasks ul li .delete-task-btn:hover ~ span {
   opacity: 0.5;
+}
+main .tasks .tasks-options {
+  color: black;
+  background: white;
+  padding: 15px 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .tasks .tasks-options .counter {
+  min-width: 100px;
+  text-align: center;
+}
+main .tasks .tasks-options .progress {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .tasks .tasks-options .progress p {
+  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+@media (max-width: 450px) {
+  main .tasks .tasks-options .progress p {
+    width: 100%;
+  }
+}
+main .tasks .tasks-options .progress p:hover {
+  border: 2px solid #210203;
+  cursor: pointer;
+}
+main .tasks .tasks-options .progress .selected {
+  border: 2px solid #210203;
 }
 main .controls {
   background: rgba(255, 255, 255, 0.041);
