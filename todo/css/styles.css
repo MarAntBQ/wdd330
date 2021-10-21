@@ -151,11 +151,6 @@ main .tasks ul li .delete-task-btn:hover,
 main .tasks ul li .done-btn:hover {
   background: #6D98BA;
 }
-main .tasks ul li .done-btn:hover ~ span {
-  text-decoration: line-through;
-  text-decoration-color: #210203;
-  text-decoration-thickness: 3px;
-}
 main .tasks ul li .delete-task-btn {
   order: 1;
 }
@@ -250,6 +245,14 @@ footer {
   text-align: center;
   padding: 25px 3%;
   font-weight: bold;
+}
+footer a {
+  color: #210203;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer a:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

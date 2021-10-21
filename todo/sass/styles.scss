@@ -182,15 +182,15 @@ main {
                     }
                 }
 
-                .done-btn {
-                    &:hover {
-                        ~span {
-                            text-decoration: line-through;
-                            text-decoration-color: $color1;
-                            text-decoration-thickness: 3px;
-                        }
-                    }
-                }
+                // .done-btn {
+                //     &:hover {
+                //         ~span {
+                //             text-decoration: line-through;
+                //             text-decoration-color: $color1;
+                //             text-decoration-thickness: 3px;
+                //         }
+                //     }
+                // }
 
                 .delete-task-btn {
                     order: 1;
@@ -209,6 +209,13 @@ main {
                     text-decoration-color: $color1;
                     text-decoration-thickness: 3px;
                 }
+                // .done-btn {
+                //     &:hover {
+                //         ~span {
+                //             text-decoration: none;
+                //         }
+                //     }
+                // }
             }
         }
 
@@ -310,4 +317,12 @@ footer {
     text-align: center;
     padding: 25px 3%;
     font-weight: bold;
+    a {
+        color: $color1;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            color: white;
+        }
+    }
 }

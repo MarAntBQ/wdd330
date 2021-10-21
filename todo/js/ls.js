@@ -20,7 +20,7 @@ function saveDataInCache(todo) {
     toDoList.push(todo);
     var alltoDoString = JSON.stringify(toDoList);
     localStorage["toDoList"] = alltoDoString;
-    ShowAllTasks();
+    ShowAllTasks(0);
 }
 
 //Show all tasks
@@ -44,17 +44,18 @@ function ShowAllTasks(kind) {
 
                 if (aTask["completed"] == true) {
                     //Change according to your html layout
-                    TasksDisplayer.innerHTML += '<li class="done"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
+                    TasksDisplayer.innerHTML += '<li class="done" data-key="'+ aTask["id"] +'"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
                 } else {
                     RemainTasks++;
-                    TasksDisplayer.innerHTML += '<li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
+                    TasksDisplayer.innerHTML += '<li data-key="'+ aTask["id"] +'"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
                 }
             } else if (kind == 1) {
                 p0.classList.remove("selected");
                 p1.classList.add("selected");
                 p2.classList.remove("selected");
                 if (aTask["completed"] == false) {
-                    TasksDisplayer.innerHTML += '<li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
+                    RemainTasks++;
+                    TasksDisplayer.innerHTML += '<li data-key="'+ aTask["id"] +'"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
                 }
             } else {
                 p0.classList.remove("selected");
@@ -62,19 +63,51 @@ function ShowAllTasks(kind) {
                 p2.classList.add("selected");
                 if (aTask["completed"] == true) {
                     //Change according to your html layout
-                    TasksDisplayer.innerHTML += '<li class="done"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
+                    TasksDisplayer.innerHTML += '<li class="done" data-key="'+ aTask["id"] +'"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>' + aTask["content"] + '</span></li>';
+                } else {
+                    RemainTasks++;
                 }
             }
 
         }
-        
+        document.getElementById("tcount").innerHTML = RemainTasks;
     } else {
         TasksDisplayer.innerHTML = "<h1 class='tac'>No Tasks found!</h1>";
     }
 }
 
+function toggleDone(key) {
+    var storedtoDoStrings = localStorage["toDoList"];   
+    var toDoList = JSON.parse(storedtoDoStrings);
+    //console.log(toDoList);
+    const index = toDoList.findIndex(item => item.id === Number(key));
+    //console.log(index);
+    if (toDoList[index]["completed"] == false) {
+        toDoList[index]["completed"] = true;
+    } else {
+        toDoList[index]["completed"] = false;
+    }
+    var alltoDoString = JSON.stringify(toDoList);
+    localStorage["toDoList"] = alltoDoString;
+    ShowAllTasks(0);
+  }
+
+  function DeleteTask(key) {
+    var storedtoDoStrings = localStorage["toDoList"];   
+    var toDoList = JSON.parse(storedtoDoStrings);
+    //console.log(toDoList);
+    const index = toDoList.findIndex(item => item.id === Number(key));
+    //console.log(index);
+    toDoList.splice(index, 1);
+    var alltoDoString = JSON.stringify(toDoList);
+    localStorage["toDoList"] = alltoDoString;
+    ShowAllTasks(0);
+  }
+
 
 export {
     addNewTask,
-    ShowAllTasks
+    ShowAllTasks,
+    toggleDone,
+    DeleteTask
 };

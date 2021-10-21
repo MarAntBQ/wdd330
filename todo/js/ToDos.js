@@ -1,4 +1,4 @@
-import {addNewTask, ShowAllTasks} from './ls.js';
+import {addNewTask, ShowAllTasks, toggleDone, DeleteTask} from './ls.js';
 
 //Get item text
 document.getElementById("add").addEventListener("click", () => {
@@ -10,6 +10,17 @@ document.getElementById("add").addEventListener("click", () => {
         input.focus();
     } else {
         alert("Please write a task");
+    }
+});
+
+var input = document.getElementById("newItem");
+input.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("add").click();
     }
 });
 
@@ -28,3 +39,18 @@ document.getElementById("p1").addEventListener("click", () => {
 document.getElementById("p2").addEventListener("click", () => {
     ShowAllTasks(2);
 });
+
+const list = document.getElementById("tasksList");
+list.addEventListener('click', event => {
+    if (event.target.classList.contains('done-btn')) {
+      const itemKey = event.target.parentElement.dataset.key;
+      //alert("You are checking the id: " + itemKey);
+      toggleDone(itemKey);
+    }
+  
+    if (event.target.classList.contains('delete-task-btn')) {
+      const itemKey = event.target.parentElement.dataset.key;
+      //alert("You are deleting the id: " + itemKey);
+      DeleteTask(itemKey);
+    }
+  });
