@@ -4,15 +4,14 @@ import {addNewTask, ShowAllTasks, toggleDone, DeleteTask} from './ls.js';
 document.getElementById("add").addEventListener("click", () => {
     let input = document.getElementById("newItem");
     let newItem = input.value;
-    if (newItem !== '') {
+    if (newItem == '' || newItem == ' ') {
+        alert("Please write a task");
+    } else {
         addNewTask(newItem);
         input.value = '';
         input.focus();
-    } else {
-        alert("Please write a task");
     }
 });
-
 var input = document.getElementById("newItem");
 input.addEventListener("keyup", function(event) {
     // Number 13 is the "Enter" key on the keyboard
