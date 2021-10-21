@@ -75,6 +75,9 @@ function ShowAllTasks(kind) {
             document.getElementById("tcount").innerHTML = '';
             document.getElementById("tcount").classList.remove("minw100px");
             document.getElementById("tcount").classList.add("minw1px");
+            p0.classList.remove("selected");
+            p1.classList.remove("selected");
+            p2.classList.remove("selected");
         } else {
             document.getElementById("tcount").classList.remove("minw1px");
             document.getElementById("tcount").classList.add("minw100px");
