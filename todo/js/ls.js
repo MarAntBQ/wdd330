@@ -70,7 +70,17 @@ function ShowAllTasks(kind) {
             }
 
         }
-        document.getElementById("tcount").innerHTML = RemainTasks;
+        if (toDoList.length == 0) {
+            TasksDisplayer.innerHTML = "<h1 class='tac'>No Tasks found!</h1>";
+            document.getElementById("tcount").innerHTML = '';
+            document.getElementById("tcount").classList.remove("minw100px");
+            document.getElementById("tcount").classList.add("minw1px");
+        } else {
+            document.getElementById("tcount").classList.remove("minw1px");
+            document.getElementById("tcount").classList.add("minw100px");
+            document.getElementById("tcount").innerHTML = '<strong>'+ RemainTasks +'</strong> tasks left';
+        }
+
     } else {
         TasksDisplayer.innerHTML = "<h1 class='tac'>No Tasks found!</h1>";
     }

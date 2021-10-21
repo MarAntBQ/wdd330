@@ -172,7 +172,6 @@ main .tasks .tasks-options {
   flex-wrap: wrap;
 }
 main .tasks .tasks-options .counter {
-  min-width: 100px;
   text-align: center;
 }
 main .tasks .tasks-options .progress {
