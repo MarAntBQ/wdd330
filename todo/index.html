@@ -32,36 +32,30 @@
     <main>
         <div class="tasks box-8 box-i-7 box-m-8 box-p-12">
             <h1 class="tac">Tasks</h1>
-            <ul>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Make the Dishes</span></li>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Watch TV</span></li>
-                <li class="done"><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Study Math</span></li>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Prepare Dinner</span></li>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Watch Movies</span></li>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Make the Assignment</span></li>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Read the Book of Mormon</span></li>
-                <li><i class="fas fa-check-square done-btn"></i><i class="fas fa-trash delete-task-btn"></i><span>Prepare my talk</span></li>
+            <ul id="tasksList">
+                
             </ul>
             <div class="tasks-options">
                 <div class="counter">
                     <strong>3</strong> tasks left
                 </div>
                 <div class="progress">
-                    <p class="selected">All.</p>
-                    <p>Active.</p>
-                    <p>Completed</p>
+                    <p id="p0">All.</p>
+                    <p id="p1">Active.</p>
+                    <p id="p2">Completed</p>
                 </div>
             </div>
         </div>
         <div class="controls box-4 box-i-5 box-m-8 box-p-12">
             <h1 class="tac">New Task</h1>
-            <form action="">
-                <input type="text" placeholder="Write the Task">
-                <button type="submit"><i class="fas fa-plus"></i></button>
-            </form>
+            <div class="form">
+                <input type="text" placeholder="Write the Task" id="newItem">
+                <button  id="add"><i class="fas fa-plus"></i></button>
+            </div>
         </div>
     </main>
     <footer>
+        <script src="js/ToDos.js" type="module"></script>
         <script src="app-settings.js"></script>
         <p>&copy; 2021 WDD 330 - All Rights Reserved</p>
     </footer>
