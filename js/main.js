@@ -22,6 +22,10 @@ function showWeeklyList() {
     {
         label: "ToDo App",
         url: "todo/"
+    },
+    {
+        label: "Week 7",
+        url: "week7/"
     }
 ];
     var listDisplayer = document.getElementById("weekly_list");

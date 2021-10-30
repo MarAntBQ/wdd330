@@ -1,4 +1,5 @@
 @import url("https://framework.marbust.com/marbust-framework.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -88,19 +89,23 @@ main {
 
     .notes-ctnr {
         width: 100%;
+
         p {
             line-height: 1.7em;
             font-size: 18px;
+
             a {
                 color: $color1;
                 text-decoration: none;
                 font-weight: bold;
                 transition: 0.5s;
+
                 &:hover {
                     color: #FCA311;
                 }
             }
         }
+
         .code-example {
             display: block;
             margin: 15px auto;
@@ -110,6 +115,7 @@ main {
             border-radius: 10px;
             border: 3px solid $color1;
         }
+
         ul {
             li {
                 font-size: 18px;
@@ -117,6 +123,7 @@ main {
                 line-height: 1.5em;
             }
         }
+
         .code-ctnr {
             background: rgb(31, 30, 30);
             border-radius: 7px;
@@ -124,23 +131,73 @@ main {
             margin: 15px 0px;
             padding: 10px;
             font-size: 18px;
+
             code {
                 width: 100%;
                 line-height: 2em;
+
                 strong {
                     color: #a4f3b1;
                 }
+
                 .attrib1 {
                     color: #f1f366;
                 }
+
                 .attrib2 {
                     color: #e8aef3;
                 }
+
                 .attrib3 {
                     color: white;
                 }
             }
         }
+    }
+
+    .chuck-norris {
+        text-align: center;
+
+        .btns-ctnr {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            button {
+                display: block;
+                max-width: 200px;
+                width: 100%;
+                margin: 5px;
+                padding: 15px 10px;
+                border: 0px;
+                font-weight: bold;
+                transition: 0.3s;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:nth-child(1) {
+                    background: $color1;
+                    color: $color3;
+
+                    &:hover {
+                        background: $color2;
+                        color: $color4;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background: $color2;
+                    color: $color4;
+                    &:hover {
+                        background: $color1;
+                    color: $color3;
+                    }
+                }
+            }
+        }
+
     }
 
     .content-table {
@@ -149,6 +206,7 @@ main {
         @media (max-width: 900px) {
             width: 100%;
         }
+
         h2 {
             font-size: 40px;
         }

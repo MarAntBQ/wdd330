@@ -130,6 +130,43 @@ main .notes-ctnr .code-ctnr code .attrib2 {
 main .notes-ctnr .code-ctnr code .attrib3 {
   color: white;
 }
+main .chuck-norris {
+  text-align: center;
+}
+main .chuck-norris .btns-ctnr {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .chuck-norris .btns-ctnr button {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  margin: 5px;
+  padding: 15px 10px;
+  border: 0px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+main .chuck-norris .btns-ctnr button:hover {
+  cursor: pointer;
+}
+main .chuck-norris .btns-ctnr button:nth-child(1) {
+  background: #14213D;
+  color: #E5E5E5;
+}
+main .chuck-norris .btns-ctnr button:nth-child(1):hover {
+  background: #FCA311;
+  color: #000000;
+}
+main .chuck-norris .btns-ctnr button:nth-child(2) {
+  background: #FCA311;
+  color: #000000;
+}
+main .chuck-norris .btns-ctnr button:nth-child(2):hover {
+  background: #14213D;
+  color: #E5E5E5;
+}
 main .content-table {
   width: 50%;
 }

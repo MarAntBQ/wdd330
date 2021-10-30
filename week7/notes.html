@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marco Antonio Bustillos Quiroz - WDD330 | Week 7 | Notes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../favicon.png" />
+    <!-- SEO Codes -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Marco Antonio Bustillos Quiroz">
+    <meta name="copyright" content="© 2021 Marco Antonio Bustillos Quiroz - All Rights Reserved">
+    <!-- <script src="js/main.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <h1><a href="./"><i class="fas fa-arrow-alt-circle-left"></i></a> Week 07 | Notes</h1>
+    </header>
+    <main>
+        <div class="notes-ctnr">
+            <h1>Testing and Debugging <i class="fab fa-js-square"></i></h1>
+            <br>
+            <hr>
+            <br>
+            <p>It’s really important to learn about it, because we need to minimize errors, and have a way to identify them.</p>
+            <p>In errors we can have system errors “system or external devices with which the program is interacting”, programmer errors “incorrect syntax or faulty logic”, and user errors “incorrect data, and the program can’t handle them.”</p>
+            <p>Exceptions are used by the program in order to deal with errors. Stack trace is proceeded in backwards with an exception.</p>
+            <p>Warnings occurs when there’re not errors, and the code won’t cause the program to crash, but it can be problematic, or it’ll run incorrectly.</p>
+            <p><strong>Importance:</strong> JavaScript didn’t implement exceptions at all until ECMAScript 3, ninja programmer should ensure that the code they write fails loudly in development so any errors can be identified and fixed quickly.</p>
+            <p><strong>Strict Mode: </strong> It produces more exceptions and warnings and prohibits the use of some deprecated features. It’s better to find the errors asap, than after in order to fix them. To implement we should put this code: <strong>'use strict';</strong><br>ES6 introduced JavaScript modules, as self-contained pieces of code that are in strict mode by default, the declaration isn’t required.</p>
+            <p><strong>Linting Tools:</strong> It can be used to test the quality of code, beyond the strict mode. They enforce a programming style guide. Good solution for teams’ work. </p>
+            <p><strong>Feature Detection:</strong> The recommended way to determine browser support for a feature is to use feature detection. The “old-school” way of checking for browser support was known as browser sniffing.</p>
+            <p><strong>Debugging in the Browser:</strong> The process of finding out where bugs occur in the code and then dealing with them. It’s useful to use breakpoints, they help us to view the value of different variables at that point in the program.</p>
+            <p><strong>The Trusty Alert: </strong> I love this way, In PHP I use echo, in NodeJS console.log(), but the alert stops a program from running until OK is clicked.</p>
+            <br>
+            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="Exvjqbq" data-user="marcoantoniomgda" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/marcoantoniomgda/pen/Exvjqbq">
+                Week05-E1</a> by MarcoAntonioMGDA (<a href="https://codepen.io/marcoantoniomgda">@marcoantoniomgda</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <br>
+            <p><strong>Using the Console:</strong> It provides a number of methods for logging information and debugging. This can be used to log the value of variables at different stages of the program, but it won’t stop.</p>
+            <p><strong>Debugging Tools:</strong> Modern browsers also have breakpoints in debugging tool, so in other words, while running we can change variables at those points. Useful command is debugger keyword.</p>
+            <p><strong>Error Objects:</strong> It can be created by the host environment when an exception occurs, or a constructor function, which can take a parameter, there are more error objects:</p>
+            <div class="pl25px">
+                <p>EvalError is not used in the currently and only retained for backwards compatibility.</p>
+                <p>RangeError is when a number is outside a range.</p>
+                <p>ReferenceError is when a reference is made to an item that doesn’t exist.</p>
+                <p>SyntaxError is when there’s a code’s syntax error.</p>
+                <p>TypeError is when there’s an error in the type of value used.</p>
+                <p>URIError is hen there’s a problem encoding.</p>
+                <p>InternalError is a non-standard error that is thrown when an error occurs in the JavaScript engine.</p>
+                <br>
+                <p>They have different properties: name “returns the name of the error constructor”, message “returns a description of the error” and stack “return a stack trace for that error”.</p>
+            </div>
+            <p><strong>Throwing Exceptions:</strong> It’s also possible to throw your own exceptions using the throw statement. It can be applied to any JavaScript expression, causing the execution of the program to stop. </p>
+            <p><strong>Exception Handling:</strong> When an exception occurs, the program terminates with an error message, it helps us to identify and fix errors. We can do it by catching the error.<br>If we suspect a piece of code will result in an exception, we can wrap it in a try block, but if an exception occurs it will pass the error object that is thrown onto a catch block.</p>
+            <br>
+            <p class="codepen" data-height="300" data-default-tab="js" data-slug-hash="abyvzOM" data-user="marcoantoniomgda" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/marcoantoniomgda/pen/abyvzOM">
+                Week05-E2</a> by MarcoAntonioMGDA (<a href="https://codepen.io/marcoantoniomgda">@marcoantoniomgda</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <br>
+            <p><strong>Tests:</strong> It’s an important part of programming, it’s really important to make our best to write good tests, in order to identify the potential errors early. It can be a simple function, so we need to run and make different tests.</p>
+            <p><strong>Test-driven Development:</strong> It’s a process of writing tests before any actual code. They’ll fail because there’s not code to test, after write the code to pass the test, after it should be refactored, continue test at each stage, and finally write more tests for new features.<br>It can be hard to always use, but it’s important to make tests</p>
+            <p><strong>Testing Frameworks:</strong> Writing tests code can be laborious, frameworks provide us a good way to use, and there’re differents:</p>
+            <p><strong><em>Jest created by Facebook:</em></strong> It makes it easy to create and run tests by providing helper methods for common test assertions.</p>
+            <p>Crunching Some Numbers: We can create some libraries in order to work with different functions, and it’s really cool how to work with this Jest framework, so we follow the steps until our library of functions is growing, we should continue with the process of refactoring. This demonstrates how TDD can be used to keep adding functionality in small increments using the fail, pass and refactor cycle.</p>
+            <br>
+            <hr>
+            <br>
+            <h2>Questions:</h2>
+            <br>
+            <ul>
+                <li>What should I learn about to debug if I need to make the TO DO App?</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2021 Marco Antonio Bustillos - All Rights Reserved</p>
+    </footer>
+</body>
