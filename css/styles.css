@@ -315,7 +315,7 @@ footer {
   cursor: move;
 }
 .e10 img {
-  animation: 300ms ease-in alternate 1s backwards shorthand;
+  animation: 300ms ease-in alternate 1s backwards shorthand infinite;
 }
 @keyframes shorthand {
   0%, 100% {
@@ -324,6 +324,28 @@ footer {
   20%, 80% {
     transform: scale(1.05);
   }
+}
+.code-example-chap12 button {
+  display: block;
+  max-width: 200px;
+  width: 100%;
+  margin: 5px;
+  padding: 15px 10px;
+  border: 0px;
+  font-weight: bold;
+  transition: 0.3s;
+  background: #14213D;
+  color: #E5E5E5;
+}
+.code-example-chap12 button:hover {
+  background: #FCA311;
+  color: #000000;
+  cursor: pointer;
+}
+.code-example-chap12 canvas {
+  border: dotted 2px black;
+  width: 100%;
+  min-height: 50vh;
 }
 
 /*# sourceMappingURL=styles.css.map */
