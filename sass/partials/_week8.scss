@@ -67,6 +67,7 @@
 
 .e6 {
     cursor: move;
+
     &:hover {
         img {
             position: relative;
@@ -78,10 +79,66 @@
 
 .e7 {
     cursor: move;
-    transition: transform 1s ease-out 50ms;
+
+    &:hover {
+        img {
+            transition: transform 1s ease-out 50ms;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.e8 {
+    cursor: move;
+    img {
+        transition-property: transform, color;
+        transition-duration: 1s;
+        transition-timing-function: ease-out;
+        transition-delay: 50ms;
+    }
     &:hover {
         img {
             transform: scale(1.05);
         }
+    }
+}
+
+.e9 {
+    cursor: move;
+    img {
+        animation: appearDisappear linear  infinite 1s;
+    }
+    &:hover {
+        img {
+           // transform: scale(1.05);
+        }
+    }
+}
+@keyframes appearDisappear {
+    0%, 100% {
+    opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+}
+
+.e10 {
+    cursor: move;
+    img {
+        animation: 300ms ease-in alternate 1s backwards shorthand;
+    }
+    &:hover {
+        img {
+           // transform: scale(1.05);
+        }
+    }
+}
+@keyframes shorthand {
+    0%, 100% {
+    transform: scale(1);
+    }
+    20%, 80% {
+        transform: scale(1.05);
     }
 }
