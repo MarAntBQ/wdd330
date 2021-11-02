@@ -1,0 +1,87 @@
+.code-example-practice {
+    display: flex;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid $color1;
+    transition: 0.3s;
+
+    img {
+        width: 100px;
+        display: block;
+        transition: 0.3s;
+    }
+}
+
+.e1 {
+    cursor: move;
+
+    &:hover {
+        img {
+            transform: translate(45px, -45px);
+        }
+    }
+}
+
+.e2 {
+    cursor: move;
+
+    &:hover {
+        img {
+            transform: scale(1.5, 0.25);
+
+        }
+    }
+}
+
+.e3 {
+    cursor: move;
+
+    &:hover {
+        img {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.e4 {
+    cursor: move;
+
+    &:hover {
+        img {
+            transform: skew(15deg, 4deg);
+        }
+    }
+}
+
+.e5 {
+    cursor: move;
+
+    &:hover {
+        img {
+            transform: rotate(45deg);
+            transform-origin: 20% 40%;
+        }
+    }
+}
+
+.e6 {
+    cursor: move;
+    &:hover {
+        img {
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+    }
+}
+
+.e7 {
+    cursor: move;
+    transition: transform 1s ease-out 50ms;
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
+}

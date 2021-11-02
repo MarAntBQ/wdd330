@@ -217,4 +217,71 @@ footer {
   font-size: 18px;
 }
 
+.code-example-practice {
+  display: flex;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #14213D;
+  transition: 0.3s;
+}
+.code-example-practice img {
+  width: 100px;
+  display: block;
+  transition: 0.3s;
+}
+
+.e1 {
+  cursor: move;
+}
+.e1:hover img {
+  transform: translate(45px, -45px);
+}
+
+.e2 {
+  cursor: move;
+}
+.e2:hover img {
+  transform: scale(1.5, 0.25);
+}
+
+.e3 {
+  cursor: move;
+}
+.e3:hover img {
+  transform: rotate(90deg);
+}
+
+.e4 {
+  cursor: move;
+}
+.e4:hover img {
+  transform: skew(15deg, 4deg);
+}
+
+.e5 {
+  cursor: move;
+}
+.e5:hover img {
+  transform: rotate(45deg);
+  transform-origin: 20% 40%;
+}
+
+.e6 {
+  cursor: move;
+}
+.e6:hover img {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.e7 {
+  cursor: move;
+  transition: transform 1s ease-out 50ms;
+}
+.e7:hover img {
+  transform: scale(1.05);
+}
+
 /*# sourceMappingURL=styles.css.map */

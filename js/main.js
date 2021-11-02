@@ -26,6 +26,10 @@ function showWeeklyList() {
     {
         label: "Week 7",
         url: "week7/"
+    },
+    {
+        label: "Week 8",
+        url: "week8/"
     }
 ];
     var listDisplayer = document.getElementById("weekly_list");
