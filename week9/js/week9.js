@@ -74,3 +74,32 @@ function AnimationF() {
         squareElement.style.transform = `rotate(${angle}deg)`
     }, 1000 / 60);
 }
+
+function DataPowers() {
+    const superman = document.getElementById('hero');
+    const powers = superman.dataset.powers;
+    const Shower = document.getElementById("hero-result");
+    Shower.innerHTML = powers;
+}
+
+function LocalStorageF() {
+    const LocalInputStr = document.getElementById("locals").value;
+    localStorage.setItem('name', LocalInputStr);
+    window.alert("Your data: " + LocalInputStr + ", was saved succesfully");
+}
+
+function LoadStorageF() {
+    window.alert(localStorage.getItem('name'));
+}
+
+function DeleteStorageF() {
+    delete localStorage.name;
+    window.alert("Your data was deleted succesfully");
+}
+
+function GeolocationF() {
+    navigator.geolocation.getCurrentPosition(youAreHere);
+    function youAreHere(position) {
+        window.alert(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);
+        } 
+}
