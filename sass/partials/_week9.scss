@@ -1,0 +1,27 @@
+.week9 {
+    button {
+        display: block;
+        max-width: 200px;
+        width: 100%;
+        margin: 5px;
+        padding: 15px 10px;
+        border: 0px;
+        font-weight: bold;
+        transition: 0.3s;
+        background: $color1;
+        color: $color3;
+
+        &:hover {
+            background: $color2;
+            color: $color4;
+            cursor: pointer;
+        }
+    }
+
+    #square {
+        margin: 50px;
+        width: 100px;
+        height: 100px;
+        background: #d16;
+        }        
+}
