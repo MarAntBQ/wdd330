@@ -99,12 +99,35 @@ function DeleteStorageF() {
 
 function GeolocationF() {
     navigator.geolocation.getCurrentPosition(youAreHere);
+
     function youAreHere(position) {
         window.alert(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);
-        } 
+    }
 }
 
 function FactorizorF() {
-    const rainbow = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
-    document.body.style.background = rainbow[Math.floor(7* Math.random())];
+    const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'rebeccapurple', 'violet'];
+    document.getElementById("outputFactorizor").style.background = rainbow[Math.floor(7 * Math.random())];
+    const numberInput = document.getElementById("numberF").value;
+    const number = Number(numberInput);
+    document.getElementById('outputFactorizor').innerText = factorsOf(number);
+}
+
+function factorsOf(n) {
+    if (Number.isNaN(Number(n))) {
+        throw new RangeError('Argument Error: Value must be an integer');
+    }
+    if (n < 0) {
+        throw new RangeError('Argument Error: Number must be positive');
+    }
+    if (!Number.isInteger(n)) {
+        throw new RangeError('Argument Error: Number must be an integer');
+    }
+    const factors = [];
+    for (let i = 1, max = Math.sqrt(n); i <= max; i++) {
+        if (n % i === 0) {
+            factors.push(i, n / i);
+        }
+    }
+    return factors.sort((a, b) => a - b);
 }
