@@ -34,6 +34,10 @@ function showWeeklyList() {
     {
         label: "Week 9",
         url: "week9/"
+    },
+    {
+        label: "Doctor App",
+        url: "doc-app/"
     }
 ];
     var listDisplayer = document.getElementById("weekly_list");
