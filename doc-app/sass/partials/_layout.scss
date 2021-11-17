@@ -1,0 +1,20 @@
+body {
+    main {
+        margin-top: 70px;
+    }
+    scrollbar-width: thin;
+    scrollbar-color: $color1 $color2;
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $color2;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color1;
+        //border-radius: 6px;
+        border: 2px solid $color2;
+    }
+}
