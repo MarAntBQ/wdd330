@@ -1,0 +1,26 @@
+.new-test {
+    min-height: calc(100vh - 70px);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/banner/new.jpg);
+    .form-ctnr {
+        form {
+            width: 100%;
+            input, select {
+                width: 100%;
+                margin: 5px 0px;
+                font-size: 18px;
+                padding: 10px;
+                border: 1px solid $color1;
+                font-family: inherit;
+                border-radius: 5px;
+                text-align: center;
+                &.invalid {
+                    border: 1px solid $color2;
+                }
+            }
+        }
+    }
+}

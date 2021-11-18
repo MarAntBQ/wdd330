@@ -42457,6 +42457,39 @@ body {
 body main {
   margin-top: 70px;
 }
+body main .page-section {
+  padding: 64px 10% 25px 10%;
+}
+body main .page-section:nth-of-type(even) {
+  background: #efefef;
+}
+body main .page-section h1,
+body main .page-section h2,
+body main .page-section h3,
+body main .page-section h4,
+body main .page-section h5,
+body main .page-section h6 {
+  text-align: center;
+  color: #4F772D;
+}
+body main .page-section hr {
+  margin: 5px auto;
+  border-color: #90A955;
+}
+body main .page-section p {
+  color: #535353;
+}
+body main .page-section p strong {
+  color: #1f1f1f;
+}
+body main .page-section p a {
+  text-decoration: none;
+  color: #4F772D;
+  transition: 0.3s all;
+}
+body main .page-section p a:hover {
+  color: #90A955;
+}
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -42699,6 +42732,31 @@ header nav ul li a::after {
   border-color: #4F772D;
   color: #4F772D;
   background: white;
+}
+
+.new-test {
+  min-height: calc(100vh - 70px);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/banner/new.jpg);
+}
+.new-test .form-ctnr form {
+  width: 100%;
+}
+.new-test .form-ctnr form input, .new-test .form-ctnr form select {
+  width: 100%;
+  margin: 5px 0px;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #4F772D;
+  font-family: inherit;
+  border-radius: 5px;
+  text-align: center;
+}
+.new-test .form-ctnr form input.invalid, .new-test .form-ctnr form select.invalid {
+  border: 1px solid #90A955;
 }
 
 footer {
