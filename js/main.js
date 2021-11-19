@@ -34,8 +34,10 @@ function showWeeklyList() {
     {
         label: "Week 9",
         url: "week9/"
-    },
-    {
+    },{
+        label: "Week 10",
+        url: "week10/"
+    },{
         label: "Doctor App",
         url: "doc-app/"
     }
