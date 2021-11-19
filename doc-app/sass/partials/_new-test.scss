@@ -6,7 +6,7 @@
     background-size: cover;
     background-image: url(../img/banner/new.jpg);
     .form-ctnr {
-        form {
+        .form {
             width: 100%;
             input, select {
                 width: 100%;
@@ -20,6 +20,15 @@
                 &.invalid {
                     border: 1px solid $color2;
                 }
+            }
+            button {
+                display: block;
+                margin: 10px auto;
+                padding: 10px 20px;
+                width: 100%;
+                max-width: 100px;
+                background: $color1;
+                color: white;
             }
         }
     }

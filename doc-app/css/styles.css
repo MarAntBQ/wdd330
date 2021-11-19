@@ -42742,10 +42742,10 @@ header nav ul li a::after {
   background-size: cover;
   background-image: url(../img/banner/new.jpg);
 }
-.new-test .form-ctnr form {
+.new-test .form-ctnr .form {
   width: 100%;
 }
-.new-test .form-ctnr form input, .new-test .form-ctnr form select {
+.new-test .form-ctnr .form input, .new-test .form-ctnr .form select {
   width: 100%;
   margin: 5px 0px;
   font-size: 18px;
@@ -42755,8 +42755,17 @@ header nav ul li a::after {
   border-radius: 5px;
   text-align: center;
 }
-.new-test .form-ctnr form input.invalid, .new-test .form-ctnr form select.invalid {
+.new-test .form-ctnr .form input.invalid, .new-test .form-ctnr .form select.invalid {
   border: 1px solid #90A955;
+}
+.new-test .form-ctnr .form button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 100px;
+  background: #4F772D;
+  color: white;
 }
 
 footer {
