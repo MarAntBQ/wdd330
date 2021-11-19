@@ -2,9 +2,6 @@ function showWeeklyList() {
     const links = [{
         label: "Notes",
         url: "notes.html"
-    },{
-        label: "Chuck Norris",
-        url: "chuck.html"
     }];
     var listDisplayer = document.getElementById("weekly_list");
     listDisplayer.innerHTML = null;
