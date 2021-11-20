@@ -1,6 +1,6 @@
 function readQuestions() {
     var QuestionsDisplayer = document.getElementById("questions-ctnr");
-    fetch("./data/questions.json")
+    fetch("https://mbrelax.xyz/questions")
     .then(response => response.json())
     .then(json => {
       let questionN = json.length;
