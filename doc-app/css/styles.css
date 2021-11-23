@@ -42776,4 +42776,24 @@ footer {
   font-weight: bold;
 }
 
+#ExamsDisplayer .past-exam {
+  background: #f0b548;
+  padding: 30px 10px;
+  border-radius: 10px;
+  border: 5px dashed #4F772D;
+  margin: 15px 0px;
+  color: black;
+}
+#ExamsDisplayer .past-exam h2 {
+  color: #4F772D;
+}
+#ExamsDisplayer .past-exam p {
+  line-height: 2em;
+  font-size: 18px;
+}
+#ExamsDisplayer .past-exam h3 {
+  color: #252535;
+  margin: 5px 0px;
+}
+
 /*# sourceMappingURL=styles.css.map */

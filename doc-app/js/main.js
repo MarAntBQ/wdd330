@@ -38,25 +38,3 @@ document.getElementsByTagName("MAIN")[0].addEventListener("click", () => {
         }, 500);
     }
 });
-
-window.onload = function() {
-    getCurrentLink();
-  };
-//Get the Current Link
-function getCurrentLink() {
-	var urlString, urlArray, pageHREF, menu, i, currentURL;
-    urlString = document.location.href;
-    urlArray = urlString.split('/');
-    pageHREF = urlArray[urlArray.length - 1];
-
-    if (pageHREF !== "") {
-        menu = document.querySelectorAll('ul li a');
-        for (i = 0; i < menu.length; i++) {
-            currentURL = (menu[i].getAttribute('href'));
-            menu[i].className = '';
-            if (currentURL === pageHREF) {
-                menu[i].className = 'active';
-            }
-        }
-    }
-}

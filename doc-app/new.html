@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <title>Doctor App | New Exam</title>
-    <link rel="icon" href="favicon.png"/>
+    <link rel="icon" href="favicon.png" />
     <script src="js/main.js" defer></script>
-    <script src="js/controller.js" defer type="module"></script>
+    <script src="js/controller-new.js" defer type="module"></script>
 </head>
+
 <body>
     <header>
         <a href="./" class="header-link"><img src="img/header/logo.png" alt="Altura LOGO"></a>
@@ -18,7 +20,7 @@
             <ul>
                 <i class="fas fa-times" id="close-btn"></i>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="new.html">New Exam</a></a></li>
+                <li><a href="new.html" class="active">New Exam</a></a></li>
                 <li><a href="past.html">Past Exams</a></li>
             </ul>
         </nav>
@@ -33,16 +35,17 @@
             <div class="flex-s-a">
                 <div class="box-6 box-i-8 box-m-10 box-p-12 form-ctnr">
                     <div class="form">
-                        <form>
-                        <input type="text" placeholder="Insert your Name" required>
-                        <input type="email" placeholder="Insert your email">
-                        <input type="tel" placeholder="Insert your phone Number">
-                        <input type="text" placeholder="Insert your address">
-                        <div id="questions-ctnr">
-                        </div>
-                        <input type="text" id="arrayAdd">
-                        <button id="btn-add">Add</button>
-                    </form>
+                        <form id="personalTest">
+                            <input type="text" placeholder="Insert your Name" required>
+                            <input type="email" placeholder="Insert your email">
+                            <p class="fs18px tac mt5px mb5px tbold">What's your Contry Code?</p>
+                            <select name="countryCode" id="countryCode"></select>
+                            <input type="tel" placeholder="Insert your phone Number">
+                            <input type="text" placeholder="Insert your address">
+                            <div id="questions-ctnr">
+                            </div>
+                            <button id="btn-add">Add</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -52,4 +55,5 @@
         <p>&copy; 2021 Marco Antonio Bustillos Quiroz - All Rights Reserved</p>
     </footer>
 </body>
+
 </html>

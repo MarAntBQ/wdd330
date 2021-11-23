@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <title>Doctor App</title>
-    <link rel="icon" href="favicon.png"/>
+    <title>Doctor App | Past Exams</title>
+    <link rel="icon" href="favicon.png" />
     <script src="js/main.js" defer></script>
+    <script src="js/controller-past.js" defer type="module"></script>
 </head>
+
 <body>
     <header>
         <a href="./" class="header-link"><img src="img/header/logo.png" alt="Altura LOGO"></a>
         <nav>
             <ul>
                 <i class="fas fa-times" id="close-btn"></i>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="new.html">New Exam</a></a></li>
-                <li><a href="past.html">Past Exams</a></li>
+                <li><a href="past.html" class="active">Past Exams</a></li>
             </ul>
         </nav>
         <i class="fas fa-bars" id="menu-btn"></i>
     </header>
     <main>
-        <div class="home-banner flex-s-a flex-vc">
-            <div class="banner-content box-7 box-i-8 box-m-10 box-p-12">
-                <p></p>
-                <p class="title fs100px fs-i-80px fs-m-60px fs-p-40px">Doctor App</p>
-                <p class="about">Welcome to our Medical App, where you can know about your health state with a quick analysis, in order you can receive the best treatment with your personal doctor.</p>
-                <div class="links-btns">
-                    <a href="#">New Exam</a>
-                    <a href="#">Past Exams</a>
+        <div class="page-section">
+            <h1 class="fs40px">Past Exams</h1>
+            <br>
+            <p class="tbold fs20px tac">Here there's the list of all your Past Exams:</p>
+            <br>
+            <div id="ExamsDisplayer">
+                <div class="past-exam">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quae error iure harum fugit, omnis sapiente blanditiis reprehenderit optio, ullam ipsa modi dignissimos illo ducimus quod ut repellat culpa corrupti unde in? Doloribus qui optio commodi! Deleniti similique vel voluptatibus laboriosam qui facilis hic aperiam nihil doloribus harum, aut temporibus.
                 </div>
             </div>
         </div>
@@ -40,4 +43,5 @@
         <p>&copy; 2021 Marco Antonio Bustillos Quiroz - All Rights Reserved</p>
     </footer>
 </body>
+
 </html>
