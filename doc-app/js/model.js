@@ -272,13 +272,12 @@ function ShowPastExams() {
       var digestiveAnswer = System1State(aExam["digestive"]);
       var intestinalAnswer = System2State(aExam["intestinal"]);
       var circulatoryAnswer = System3State(aExam["circulatory"]);
-      // "circulatory": s3,
-      // "nervous": s4,
-      // "immune": s5,
-      // "respiratory": s6,
-      // "urinary": s7,
-      // "glandular": s8,
-      // "structure": s9
+      var nervousAnswer = System4State(aExam["nervous"]);
+      var immuneAnswer = System5State(aExam["immune"]);
+      var respiratoryAnswer = System6State(aExam["respiratory"]);
+      var urinaryAnswer = System7State(aExam["urinary"]);
+      var glandularAnswer = System8State(aExam["glandular"]);
+      var structureAnswer = System9State(aExam["structure"]);
       ExamsDisplayer.innerHTML += `<div class="past-exam">
       <h2>Exam # ${aExam["id"]}</h2>
       <p><strong><i class="fas fa-calendar-alt"></i> Date:</strong> ${aExam["date"]}</p>
@@ -298,6 +297,30 @@ function ShowPastExams() {
       </br>
       <h2>Circulatory System</h2>
       ${circulatoryAnswer}
+      <hr>
+      </br>
+      <h2>Nervous System</h2>
+      ${nervousAnswer}
+      <hr>
+      </br>
+      <h2>Immune System</h2>
+      ${immuneAnswer}
+      <hr>
+      </br>
+      <h2>Respiratory System</h2>
+      ${respiratoryAnswer}
+      <hr>
+      </br>
+      <h2>Urinary System</h2>
+      ${urinaryAnswer}
+      <hr>
+      </br>
+      <h2>Glandular System</h2>
+      ${glandularAnswer}
+      <hr>
+      </br>
+      <h2>Structural System</h2>
+      ${structureAnswer}
       </div>`;
     }
   }
@@ -337,6 +360,72 @@ function System3State(s3) {
   } else if (s3 <= 1) {
     return GH;
   } else if (s3 <= 3) {
+    return RH;
+  } else {
+    return BH;
+  }
+}
+function System4State(s4) {
+  if (s4 <= 1) {
+    return VGH;
+  } else if (s4 <= 3) {
+    return GH;
+  } else if (s4 <= 5) {
+    return RH;
+  } else {
+    return BH;
+  }
+}
+function System5State(s5) {
+  if (s5 <= 1) {
+    return VGH;
+  } else if (s5 <= 3) {
+    return GH;
+  } else if (s5 <= 5) {
+    return RH;
+  } else {
+    return BH;
+  }
+}
+function System6State(s5) {
+  if (s5 <= 0) {
+    return VGH;
+  } else if (s5 <= 1) {
+    return GH;
+  } else if (s5 <= 3) {
+    return RH;
+  } else {
+    return BH;
+  }
+}
+function System7State(s5) {
+  if (s5 <= 0) {
+    return VGH;
+  } else if (s5 <= 1) {
+    return GH;
+  } else if (s5 <= 3) {
+    return RH;
+  } else {
+    return BH;
+  }
+}
+function System8State(s5) {
+  if (s5 <= 1) {
+    return VGH;
+  } else if (s5 <= 3) {
+    return GH;
+  } else if (s5 <= 5) {
+    return RH;
+  } else {
+    return BH;
+  }
+}
+function System9State(s5) {
+  if (s5 <= 0) {
+    return VGH;
+  } else if (s5 <= 1) {
+    return GH;
+  } else if (s5 <= 3) {
     return RH;
   } else {
     return BH;
