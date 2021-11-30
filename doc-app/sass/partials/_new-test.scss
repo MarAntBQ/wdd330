@@ -21,14 +21,53 @@
                     border: 1px solid $color2;
                 }
             }
+            .row-input {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                transition: 0.3s;
+                margin: 10px 0px;
+                font-size: 18px;
+                //border-bottom: 0.5px solid rgba(0, 166, 81, 0.14);
+                cursor: pointer;
+                padding: 10px;
+                color: $color1;
+                &:hover {
+                    background: rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                }
+                
+                input {
+                    display: inline;
+                    width: 30px;
+                    min-width: 30px;
+                    max-width: 30px;
+                    margin: 0px 0px;
+                    cursor: pointer;
+                }
+                label {
+                    cursor: pointer;
+                    width: 100%;
+                }
+            }
             button {
                 display: block;
                 margin: 10px auto;
                 padding: 10px 20px;
                 width: 100%;
-                max-width: 100px;
+                max-width: 150px;
+                font-size: 18px;
                 background: $color1;
                 color: white;
+                border: 0px;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background: $color2;
+                }
             }
         }
     }

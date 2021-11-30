@@ -20,6 +20,16 @@ function readQuestions() {
       let questionN = json.length;
       for (var i = 0; i < questionN; i++) {
         var aQuestion = json[i];
+        // QuestionsDisplayer.innerHTML +=
+        //   `<p class="fs18px tac mt5px mb5px tbold">${i +1}. ${aQuestion}</p>
+        //     <div class="row-input">
+        //       <input type="radio" required name="question${i}" id="question${i}" value="true" >
+        //       <label for="question${i}">Yes</label>
+        //     </div>
+        //     <div class="row-input">
+        //       <input type="radio" required name="question${i}" id="question${i*100+100}" value="false" >
+        //       <label for="question${i*100+100}">No</label>
+        //     </div>`;
         QuestionsDisplayer.innerHTML +=
           `<p class="fs18px tac mt5px mb5px tbold">${i +1}. ${aQuestion}</p>
           <select name="question${i}" id="question${i}" required>
