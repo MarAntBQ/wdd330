@@ -276,18 +276,18 @@ function ShowPastExams() {
     var examsTest = JSON.parse(storedExamsTest);
     ExamsDisplayer.innerHTML = null;
     var numberOfExams = examsTest.length;
-    for (var i = examsTest.length; i > 0; i--) {
+    for (var i = numberOfExams ; i > 0; i--) {
       var currentI = i - 1;
       var aExam = examsTest[currentI];
-      var digestiveAnswer = System1State(aExam["digestive"]);
-      var intestinalAnswer = System2State(aExam["intestinal"]);
-      var circulatoryAnswer = System3State(aExam["circulatory"]);
-      var nervousAnswer = System4State(aExam["nervous"]);
-      var immuneAnswer = System5State(aExam["immune"]);
-      var respiratoryAnswer = System6State(aExam["respiratory"]);
-      var urinaryAnswer = System7State(aExam["urinary"]);
-      var glandularAnswer = System8State(aExam["glandular"]);
-      var structureAnswer = System9State(aExam["structure"]);
+      var digestiveAnswer = SystemState(aExam["digestive"], 1, 3, 5);
+      var intestinalAnswer = SystemState(aExam["intestinal"], 1, 3, 5);
+      var circulatoryAnswer = SystemState(aExam["circulatory"], 0, 1, 3);
+      var nervousAnswer = SystemState(aExam["nervous"], 1, 3, 5);
+      var immuneAnswer = SystemState(aExam["immune"], 1, 3, 5);
+      var respiratoryAnswer = SystemState(aExam["respiratory"], 0, 1, 3);
+      var urinaryAnswer = SystemState(aExam["urinary"], 0, 1, 3);
+      var glandularAnswer = SystemState(aExam["glandular"], 1, 3, 5);
+      var structureAnswer = SystemState(aExam["structure"], 0, 1, 3);
       ExamsDisplayer.innerHTML += `<div class="past-exam">
       <h2>Exam # ${aExam["id"]}</h2>
       <p><strong><i class="fas fa-calendar-alt"></i> Date:</strong> ${aExam["date"]}</p>
@@ -341,101 +341,13 @@ const GH = '<h3 class="fs30px">Good Health</h3><p class="tac tbold"><i class="fa
 const RH = '<h3 class="fs30px">Regular Health</h3><p class="tac tbold"><i class="far fa-sad-tear"></i> You need to change your diet and lifestyle as recommendation in order to improve your health.</p>';
 const BH = '<h3 class="fs30px">Bad Health</h3><p class="tac tbold"><i class="fas fa-sad-cry"></i> We seriously recommend changing your diet and lifestyle.</p>';
 
-function System1State(s1) {
-  if (s1 <= 1) {
-    return VGH;
-  } else if (s1 <= 3) {
-    return GH;
-  } else if (s1 <= 6) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
 
-function System2State(s2) {
-  if (s2 <= 1) {
+function SystemState(s, p1, p2, p3) {
+  if (s <= p1) {
     return VGH;
-  } else if (s2 <= 3) {
+  } else if (s <= p2) {
     return GH;
-  } else if (s2 <= 6) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System3State(s3) {
-  if (s3 <= 0) {
-    return VGH;
-  } else if (s3 <= 1) {
-    return GH;
-  } else if (s3 <= 3) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System4State(s4) {
-  if (s4 <= 1) {
-    return VGH;
-  } else if (s4 <= 3) {
-    return GH;
-  } else if (s4 <= 5) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System5State(s5) {
-  if (s5 <= 1) {
-    return VGH;
-  } else if (s5 <= 3) {
-    return GH;
-  } else if (s5 <= 5) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System6State(s5) {
-  if (s5 <= 0) {
-    return VGH;
-  } else if (s5 <= 1) {
-    return GH;
-  } else if (s5 <= 3) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System7State(s5) {
-  if (s5 <= 0) {
-    return VGH;
-  } else if (s5 <= 1) {
-    return GH;
-  } else if (s5 <= 3) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System8State(s5) {
-  if (s5 <= 1) {
-    return VGH;
-  } else if (s5 <= 3) {
-    return GH;
-  } else if (s5 <= 5) {
-    return RH;
-  } else {
-    return BH;
-  }
-}
-function System9State(s5) {
-  if (s5 <= 0) {
-    return VGH;
-  } else if (s5 <= 1) {
-    return GH;
-  } else if (s5 <= 3) {
+  } else if (s <= p3) {
     return RH;
   } else {
     return BH;
